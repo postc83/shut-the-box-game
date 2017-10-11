@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Shut the Box!</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+    
+  <!-- jQuery
+  -------------------------------------------------- -->
+  <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+      <header>
+          <nav>
+              <div class="row">
+                  <h3 id="title">Shut the Box</h3><a href="#" id="menu-icon" ></a>
+              </div>
+              <div class="row center">
+                  <ul id="nav">
+                    <li id="startGame" class="button">Change Name</li>
+                    <li id="restart" class="button">Restart</li>
+                    <li id="rules" class="button">Rules</li>
+                    <li id="highScore" class="button">Best Scores</li>
+                    <li id="changeBg" class="button">Settings</li>
+                  </ul>
+            </div>
+          </nav>
+      </header>
+      <section id="boxArea">
+          <section id="top">
+            <div class="row">
+                
+                <div class="twelve columns">
+                    <ul>
+                        <li id="one" class="button flaps">1</li>
+                        <li id="two" class="button flaps">2</li>
+                        <li id="three" class="button flaps">3</li>
+                        <li id="four" class="button flaps">4</li>
+                        <li id="five" class="button flaps">5</li>
+                        <li id="six" class="button flaps">6</li>
+                        <li id="seven" class="button flaps">7</li>
+                        <li id="eight" class="button flaps">8</li>
+                        <li id="nine" class="button flaps">9</li>
+                    </ul>
+                </div>
+                
+            </div>
+          </section>
+          <section id="middle">
+              <div class="row" id="roll">
+                  <div class="twelve columns"><button id="diceOne" class="button btn">1</button><button id="diceTwo" class="button btn">5</button></div>
+              </div>
+              <div class="row">
+                <div class="twelve colums"><p id="rollTotal">Total: 0</p></div>  
+              </div>
+              <div class="row">
+                  <div class="twelve colums"><button id="rollBtn" class="button">Roll Dice</button></div>
+              </div>
+          </section>
+          <section id="bottom">
+              <div class="row">
+                <div class="six columns"><span id="playerScore">Player 1's Score: 45</span></div>
+                <div class="six columns"><span id="noRolls">Number of Rolls: 0</span></div>
+              </div>
+          </section>
+      </section>
+  </div>
+  
+  <!-- Modals
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+  <!-- The Rules Modal -->
+      <div id="rulesModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="row">
+                <h3 class="modalHead">Rules...</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    <p>You can win by either flipping down all the tiles or having the lowest score.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    <p>
+                    At the start of the game all tiles are "open" (facing up, showing the numbers 1 to 9). <br>
+                    During the game, each player plays in turn. A player begins his or her turn by clicking the “Roll Dice” button. 
+                    After the “Roll Dice” button is clicked the total of the two dice is shown. The player then shuts one of any combination of open numbers that equals the total number of on the dice. For example, if the total number is 8, the player may choose any of the following sets of numbers (as long as all of the numbers in the set are available to be covered):<br><br>
+                    8<br>
+                    7, 1<br>
+                    6, 2<br>
+                    5, 3<br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    <p>
+                      The player then rolls the dice again, aiming to shut more numbers. The player continues throwing the dice and shutting numbers until reaching a point at which, the player cannot shut any more numbers. At that point, the player scores the sum of the numbers that are still uncovered. For example, if the numbers 3, and 5 are still open when the player throws a two, the player's score is 8 (3 + 5 = 8). Play then passes to the next player.<br>
+                      For further clarification, if 2, 3, and 5 are the only numbers open, and the player throws a 4, their turn ends, since 4 requires either 4 or the pair 1, 3 to be open. With 2, 3, and 5 being the only open numbers, the only throws that would not end the player's turn are 2, 3, 5, 7, 8, and 10.<br>
+                      After every player has taken a turn, the player with the lowest score wins.If a player succeeds in closing all of the numbers, he or she is said to have "Shut the Box" – the player wins immediately and the game is over.
+                      </p>
+                </div>
+            </div>
+          
+        </div>
+
+      </div>
+      
+      <!-- The Scores Modal -->
+      <div id="scoreModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content modalSmall">
+            <div class="row">
+                <h3 class="modalHead">Best Scores...</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="row">
+                <div class="twelve columns center" >
+                    <ol id="scoreList">
+            
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns"><button id="clear" class="button">Clear Scores</button></div>
+            </div>
+        </div>
+
+      </div>
+    
+    <!-- The alert Modal -->
+      <div id="alertModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content modalSmall">
+            <div class="row">
+                <h5 id="alert" class="modalHead"></h5>
+                <span class="close">&times;</span>
+            </div>
+            <div class="row center">
+                <div class="twelve columns"><h6 id="alert2"></h6></div>
+            </div>
+        </div>
+
+      </div>
+    
+    <!-- The settings Modal -->
+      <div id="settingsModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content modalMed">
+            <div class="row">
+                <h4 class="modalHead">Settings:</h4>
+                <span class="close">&times;</span>
+            </div>
+            <div class="row center">
+                    <ul class="navSettings">
+                        <li>Change Background Colour:</li>
+                        <li><button id="grey">Grey</button></li>
+                        <li><button id="red">Blue</button></li>
+                        <li><button id="white">White</button></li>
+                        <li><button id="other">Other</button></li>
+                    </ul>
+            </div>
+            <div class="row center">
+                <ul class="navSettings">
+                        <li>Change Text Size:</li>
+                        <li><button id="up">Bigger</button></li>
+                        <li><button id="default">Default</button></li>
+                        <li><button id="down">Smaller</button></li>
+                    </ul>
+            </div>
+        </div>
+
+      </div>
+  
+    <script src="js/javaScript.js"></script>
+    <script src="js/jQuery.js"></script>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
