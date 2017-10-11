@@ -1,0 +1,139 @@
+#boxArea{
+    width: 100%;
+    height: auto;
+    background-color: forestgreen;
+    margin: auto;
+    border: 8px solid #663300;
+    
+}
+#title{
+    display: inline-block;
+}
+
+#top, #middle, #bottom{
+    text-align: center;
+}
+
+.flaps{
+    margin-top: 1rem;
+    background-color: #663300;
+    color: white;
+    height: 8rem;
+    font-size: 2rem;
+}
+
+.btn{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: white;
+    color: black;
+    
+}
+
+#rollBtn{
+    background-color: #bbb;
+}
+
+.center{
+    text-align: center;
+}
+
+.alignRight{
+    text-align: right;
+}
+
+.alignLeft{
+    text-align: left;
+}
+
+.modalHead{
+    display: inline-block;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+.modalSmall {
+    width: 65%; /* small modal size */
+}
+
+.modalMed {
+    width: 70%; /* medium modal size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menu-icon {
+    float: right;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/menu.png) center;
+    padding: .2em;
+
+}
+
+
+.navSettings li{
+    display: inline-block;
+    text-decoration: none;
+}
+a:hover#menu-icon {
+    border: 1px solid black;
+	border-radius: 4px;
+    }
+
+/* For small screens make make buttons sit on top of each other */
+@media only screen and (max-width : 414px) {
+    
+   
+    #nav li {
+        display: hidden;
+        width: 100%;
+    }
+
+    .navSettings li{
+        width: 100%;
+    }
+    
+}
+
